@@ -48,7 +48,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="https://drive.google.com/file/d/1oCahc4agSaEHX5oa8vWc2xpc2pc9IRcL/view?usp=sharing"
+                href="https://drive.google.com/file/d/11MOpAgOUjtAIlA-Y8Js4EUqmdDqP2yHw/view?usp=sharing"
                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-blue-accent-200"
                 target="_blank"
               >
@@ -137,7 +137,7 @@ export default function Header() {
                     </li>
                     <li>
                       <a
-                        href="https://drive.google.com/file/d/1oCahc4agSaEHX5oa8vWc2xpc2pc9IRcL/view?usp=sharing"
+                        href="https://drive.google.com/file/d/11MOpAgOUjtAIlA-Y8Js4EUqmdDqP2yHw/view?usp=sharing"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-accent-200"
                         target="_blank"
                       >
