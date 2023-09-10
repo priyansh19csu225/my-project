@@ -13,28 +13,29 @@ export default function ContactMe() {
       <div className="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
         <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
           <span className="relative inline-block">
+           
             <svg
-              viewBox="0 0 52 24"
-              fill="currentColor"
-              className="absolute top-0 -right-28 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
-            >
-              <defs>
-                <pattern
-                  id="df31b9f6-a505-42f8-af91-d2b7c3218e5c"
-                  x="0"
-                  y="0"
-                  width=".135"
-                  height=".30"
-                >
-                  <circle cx="1" cy="1" r=".7"></circle>
-                </pattern>
-              </defs>
-              <rect
-                fill="url(#df31b9f6-a505-42f8-af91-d2b7c3218e5c)"
-                width="52"
-                height="24"
-              ></rect>
-            </svg>
+                viewBox="0 0 52 24"
+                fill="currentColor"
+                className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+              >
+                <defs>
+                  <pattern
+                    id="27df4f81-c854-45de-942a-fe90f7a300f9"
+                    x="0"
+                    y="0"
+                    width=".135"
+                    height=".30"
+                  >
+                    <circle cx="1" cy="1" r=".7"></circle>
+                  </pattern>
+                </defs>
+                <rect
+                  fill="url(#df31b9f6-a505-42f8-af91-d2b7c3218e5c)"
+                  width="52"
+                  height="24"
+                ></rect>
+              </svg>
             <span className="relative">Contact Me</span>
           </span>
         </h2>
