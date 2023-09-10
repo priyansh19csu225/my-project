@@ -1,6 +1,11 @@
 
 import YoutubeEmbed from "./YoutubeEmbed";
 import DemoAccount from "./DemoAccount";
+import Image from "next/image";
+import drivescanImage from "../../images/drivescan.png";
+import flickrSearchImage from "../../images/flickrsearchimage.png";
+import blogosphereImage from "../../images/blogosphere.png";
+import Warning from "./Warning";
 
 
   const projects = [
@@ -44,6 +49,37 @@ import DemoAccount from "./DemoAccount";
       sourceCodeLink: "https://github.com/priyansh19csu225/Frulenco",
     },
   ];
+
+  const otherProjects = [
+    {
+      id: 4,
+      name: "Drive Scan",
+      description: "A Google Drive risk analysis tool that scans the user's Google Drive and provides a detailed report of the files present in the drive. It also provides a risk score for the user's drive based on the files present in the drive.",
+      image : drivescanImage,
+      technologies: ["React", "Google API" , "Google OAuth2", "Google Drive API" ,  "Postgres" , "Prisma" , "Node.js", "Express.js" , "Vercel" , "Netlify" ],
+      liveDemoLink: "https://drive-scan.netlify.app/",
+      sourceCodeLink: "https://github.com/priyansh19csu225/jarviot-challenge-full-stack-frontend",
+    },
+    {
+      id: 5,
+      name: "Flickr Search Photos",
+      description: "A web application that uses Flickr API to search photos and display them in a scrolling grid.",
+      warning: "Flickr's Recent API may occasionally include content that some users may find inappropriate. Please use caution and discretion when using this service.",
+      image : flickrSearchImage,
+      technologies: ["React", "Flickr API" , "Material UI", "HTML" ,  "CSS" , "JavaScript" , "Netlify" ],
+      liveDemoLink: "https://search-flickr.netlify.app/",
+      sourceCodeLink: "https://github.com/priyansh19csu225/search-app",
+    },
+    {
+      id: 6,
+      name: "BlogoSphere",
+      description: "A basic blogging website where users can create, read, update and delete their blogs online.",
+      image : blogosphereImage,
+      technologies: ["React", "MongoDB Atlas" , "Material UI", "HTML" ,  "CSS" , "JavaScript" , "Node.js", "Express.js", "Vercel",  "Netlify" ],
+      liveDemoLink: "https://theblogosphere.netlify.app/",
+      sourceCodeLink: "https://github.com/priyansh19csu225/blog-app-client",
+    },
+  ]
 
 export default function Projects() {
   
@@ -110,6 +146,93 @@ export default function Projects() {
                 </h1>
                 <p className="mb-2 text-gray-700">{project.description}</p>
                 {project.demoAccount && <DemoAccount email={project.demoAccount.email} password={project.demoAccount.password} />}
+                <div className="flex flex-wrap space-x-2 mt-5">
+                  <h2 className="inline-block text-gray-600 mb-3 text-xl font-bold leading-5">
+                    Technologies:
+                  </h2>
+                  {project.technologies.map((technology, i) => (
+                    <span
+                      key={i}
+                      className="px-2 py-1 mb-2 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full"
+                    >
+                      {technology}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex flex-wrap space-x-2 mt-5">
+                  <a
+                    href={project.liveDemoLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label=""
+                    className="text-gray-900 inline-flex px-4 py-2 items-center transform font-semibold border transition duration-300 hover:scale-105 shadow hover:shadow-lg"
+                  >
+                    Live Demo
+                  </a>
+                  <a
+                    href={project.sourceCodeLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label=""
+                    className="inline-flex bg-blue-500 hover:bg-blue-700 shadow hover:shadow-lg px-4 py-2 items-center font-semibold transition duration-300 hover:scale-105 text-white"
+                  >
+                    Source Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div className="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
+          <h2 className="max-w-lg mx-auto mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
+            <span className="relative inline-block">
+             
+              <span className="relative">Other Noteworthy Projects</span>
+              <svg
+              viewBox="0 0 52 24"
+              fill="currentColor"
+              className="absolute top-0 -right-28 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+            >
+              <defs>
+                <pattern
+                  id="df31b9f6-a505-42f8-af91-d2b7c3218e5c"
+                  x="0"
+                  y="0"
+                  width=".135"
+                  height=".30"
+                >
+                  <circle cx="1" cy="1" r=".7"></circle>
+                </pattern>
+              </defs>
+              <rect
+                fill="url(#27df4f81-c854-45de-942a-fe90f7a300f9)"
+                width="52"
+                height="24"
+              ></rect>
+            </svg>
+            </span>
+          </h2>
+        </div>
+        <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
+          {otherProjects.map((project, index) => (
+            <div
+              key={index}
+              className="border border-gray-800 flex flex-col overflow-hidden transition-shadow duration-300 rounded shadow-md"
+            >
+              <Image src={project.image}   alt="working" />
+              
+            
+      {/* <YoutubeEmbed videoLink={project.videoFileName} /> */}
+     
+              <div className="p-5 flex flex-col bg-white flex-1">
+                <h1 className="text-gray-900 inline-block mb-3 text-2xl font-bold leading-7 ">
+                  {project.name}
+                </h1>
+                <p className="mb-2 text-gray-700">{project.description}</p>
+                {/* {project.demoAccount && <DemoAccount email={project.demoAccount.email} password={project.demoAccount.password} />} */}
+                {project.warning && <Warning warning={project.warning} />}
                 <div className="flex flex-wrap space-x-2 mt-5">
                   <h2 className="inline-block text-gray-600 mb-3 text-xl font-bold leading-5">
                     Technologies:
